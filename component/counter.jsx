@@ -21,13 +21,25 @@ handleCounter = ()=>{
   this.setState({count:this.state.count});
   //console.log(this.state.count);
 }
+decrementCounter = () =>{
+  this.state.count--;
+  this.setState({count:this.state.count})
+}
 render(){
   
     return (
       <div>
       <div className='container'>
       <span style = {this.styles} className ={this.getBadgeClasses()}>{this.formatCount()}</span>
-      <button onClick = {this.handleCounter}className = 'btn btn-secondary btn-sm'>+</button>
+      <div >
+      <button  
+      style = {{marginRight:10}}
+      onClick = {this.decrementCounter}
+      className = 'btn btn-secondary btn-sm'>-</button>
+      <button
+       onClick = {this.handleCounter}
+       className = 'btn btn-secondary btn-sm'>+</button>
+      </div>
      </div>
       </div>
       )

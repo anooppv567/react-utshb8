@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Counter from './component/counter';
+import Counters from './component/counters';
 class App extends Component {
   constructor() {
     super();
@@ -24,4 +24,4 @@ class App extends Component {
   }
 }
 
-render(<Counter />, document.getElementById('root'));
+render(<Counters />, document.getElementById('root'));
