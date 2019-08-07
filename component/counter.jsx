@@ -38,8 +38,14 @@ render(){
       onClick = {this.decrementCounter}
       className = 'btn btn-secondary btn-sm'>-</button>
       <button
+      style = {{marginRight:10}}
        onClick = {this.handleCounter}
        className = 'btn btn-secondary btn-sm'>+</button>
+       <button 
+       onClick = {this.props.onDelete}
+       className = 'btn btn-danger btn-sm' >Delete
+       
+       </button>
       </div>
      </div>
       </div>

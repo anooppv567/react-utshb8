@@ -9,10 +9,14 @@ state = {
     {id:4,value:0}
          ]
 }
+handleDelete = ()=>{
+console.log('OnDelete');
+}
   render (){
     return (
       <div>
-     {this.state.counters.map(counter =><Counter key={counter.id} value ={counter.value} id = {counter.id}> </Counter>)}
+     {this.state.counters.map(counter =><Counter key={counter.id} value ={counter.value} id = {counter.id} 
+     onDelete = {this.handleDelete}> </Counter>)}
       </div>
     )
   }
