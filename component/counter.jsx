@@ -29,6 +29,7 @@ render(){
   
     return (
       <div>
+      <h4>Counter #{this.props.id}</h4>
       <div className='container'>
       <span style = {this.styles} className ={this.getBadgeClasses()}>{this.formatCount()}</span>
       <div >
