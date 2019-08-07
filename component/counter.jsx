@@ -42,7 +42,7 @@ render(){
        onClick = {this.handleCounter}
        className = 'btn btn-secondary btn-sm'>+</button>
        <button 
-       onClick = {this.props.onDelete}
+       onClick = {() =>this.props.onDelete(this.props.id)}
        className = 'btn btn-danger btn-sm' >Delete
        
        </button>

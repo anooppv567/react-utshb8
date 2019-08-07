@@ -9,8 +9,9 @@ state = {
     {id:4,value:0}
          ]
 }
-handleDelete = ()=>{
-console.log('OnDelete');
+handleDelete = (counterId)=>{
+const filteredCounters = this.state.counters.filter( counter =>counter.id !== counterId);
+this.setState( {counters : filteredCounters});
 }
   render (){
     return (
