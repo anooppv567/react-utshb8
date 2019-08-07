@@ -16,7 +16,7 @@ this.setState( {counters : filteredCounters});
   render (){
     return (
       <div>
-     {this.state.counters.map(counter =><Counter key={counter.id} value ={counter.value} id = {counter.id} 
+     {this.state.counters.map(counter =><Counter key={counter.id} counter ={counter}
      onDelete = {this.handleDelete}> </Counter>)}
       </div>
     )

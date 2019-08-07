@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Counter extends Component{
 state = {
-  count : this.props.value,
+  count : this.props.counter.value,
   tags : ['tag1','tag2','tag3']
 };
 styles = {
@@ -29,7 +29,7 @@ render(){
   
     return (
       <div>
-      <h4>Counter #{this.props.id}</h4>
+      <h4>Counter #{this.props.counter.id}</h4>
       <div className='container'>
       <span style = {this.styles} className ={this.getBadgeClasses()}>{this.formatCount()}</span>
       <div >
@@ -42,7 +42,7 @@ render(){
        onClick = {this.handleCounter}
        className = 'btn btn-secondary btn-sm'>+</button>
        <button 
-       onClick = {() =>this.props.onDelete(this.props.id)}
+       onClick = {() =>this.props.onDelete(this.props.counter.id)}
        className = 'btn btn-danger btn-sm' >Delete
        
        </button>
