@@ -9,15 +9,40 @@ state = {
     {id:4,value:0}
          ]
 }
+handleReset = ()=>{
+  const counters = this.state.counters.filter(counter =>{
+    counter.value =0;
+    return counter;
+  });
+  this.setState({counters});
+
+}
 handleDelete = (counterId)=>{
 const filteredCounters = this.state.counters.filter( counter =>counter.id !== counterId);
 this.setState( {counters : filteredCounters});
 }
+handleCounter = (counter)=>{
+  const counters = [...this.state.counters];
+  const index = counters.indexOf(counter);
+  counters[index].value++;
+ this.setState({counters});
+}
+decrementCounter = (counter) =>{
+  const counters = [...this.state.counters];
+  const index = counters.indexOf(counter);
+  counters[index].value--;
+  this.setState({counters})
+
+}
   render (){
     return (
       <div>
+      <button onClick = {this.handleReset}className = 'btn btn-primary btn-sm'> Reset</button>
      {this.state.counters.map(counter =><Counter key={counter.id} counter ={counter}
-     onDelete = {this.handleDelete}> </Counter>)}
+     onDelete = {this.handleDelete}
+     onIncrement = {this.handleCounter}
+     onDecrement = {this.decrementCounter}> </Counter>)}
+     
       </div>
     )
   }
