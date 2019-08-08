@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Counters from './component/counters';
+
 class App extends Component {
   constructor() {
     super();
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello />
         <p>
           Start editing to see some magic happen :)
         </p>
@@ -24,4 +24,4 @@ class App extends Component {
   }
 }
 
-render(<Counters />, document.getElementById('root'));
+render(<Hello />, document.getElementById('root'));
